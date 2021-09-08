@@ -1,0 +1,108 @@
+#include <iostream>
+#include <unistd.h>
+
+using namespace std;
+
+int main(){
+ 
+  int loop = 1;
+  while(loop <=5){
+
+  
+   int lucas_shares, edward_shares, harry_shares;
+   double  total_money;
+   system("clear");
+   std::cout<<"Enter Lucas's number of shares: " <<  std::endl;
+   std::cin >> lucas_shares;
+   std::cout << "Enter Edward's shares: " << std::endl;
+   std::cin >> edward_shares;
+   std::cout << "Enter Harry's number of shares: " << std::endl;
+   std::cin >> harry_shares;
+   
+   
+   std::cout << "Enter the total amount of money: " << std::endl;
+   std::cin>> total_money;
+  
+   std::cout << "Loading..." << std::endl;
+   sleep(1);
+   std::cout << "Results are: " << std::endl;
+   sleep(1);
+
+   std::cout << "\nTotal number of shares are : " << lucas_shares + edward_shares + harry_shares << std::endl;
+   std::cout << "Money per shares: " << total_money / lucas_shares + edward_shares + harry_shares << std::endl;
+   std::cout << "Money owed: \n" << std::endl;
+   double money_combined = lucas_shares + edward_shares + harry_shares;
+   double money_per_share = total_money / money_combined;
+   
+
+   std::cout << "Lucas: " << lucas_shares * money_per_share << std::endl;
+   std::cout << "Edward: " << edward_shares * money_per_share << std::endl;
+   std::cout << "Harry: " << harry_shares * money_per_share << std::endl;
+   
+   std::string exit_or_restart;
+   sleep(2);
+   std::cout << "\nIf you want to exit type 'yes'" << std::endl;
+   std::cout << "If you want to restart type 'no'" << std::endl;
+   std::cin>> exit_or_restart;
+
+   if (exit_or_restart == "yes"){
+     std::cout<< "Okay. Program exited..." << std::endl;
+     exit(0);
+   }
+   else if (exit_or_restart == "no"){
+   
+   std::cout << "Restarting in 3..." << std::endl;
+   sleep(1);
+   std::cout << "Restarting in 2..." << std::endl;
+   sleep(1);
+   std::cout << "Restarting in 1..." << std::endl;
+   sleep(1);
+   std::cout << "Restarting now..." << std::endl;
+   sleep(1);
+   std::cout << "loop" << std::endl;
+
+
+   }
+    else {
+       system("clear");
+       std::cout << "You didn't input 'yes' or 'no'." << std::endl;
+       sleep(1);
+       std::cout << "I'll ask again: \n" << std::endl;
+       sleep(1);
+          std::string exit_or_restart;
+          
+          std::cout << "\nIf you want to exit type 'yes'" << std::endl;
+          std::cout << "If you want to restart type 'no'" << std::endl;
+          std::cin>> exit_or_restart;
+
+          if (exit_or_restart == "yes"){
+            std::cout<< "Okay. Program exited..." << std::endl;
+            exit(0);
+          }
+          else if (exit_or_restart == "no"){
+   
+          std::cout << "Restarting in 3..." << std::endl;
+          sleep(1);
+          std::cout << "Restarting in 2..." << std::endl;
+          sleep(1);
+          std::cout << "Restarting in 1..." << std::endl;
+          sleep(1);
+          std::cout << "Restarting now..." << std::endl;
+          sleep(1);
+          std::cout << "loop" << std::endl;
+          }else {
+            std::cout << "Alright I give up.";
+            sleep(1);
+            std::cout << " Good riddance.";
+            exit(0);
+          }
+
+       
+    }  } 
+
+     
+ return 0;
+ 
+
+ // End Bracket
+}
