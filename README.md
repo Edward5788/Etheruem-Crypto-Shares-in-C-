@@ -1,0 +1,2 @@
+# theruem-Crypto-Shares-in-C-
+I've done the same program just in Exel and decided to test my C+ skills with this.  It's for in Nanopool where I was sharing the same pool with 2 others and had to work out how much people needed to be paid by their number of shares and the total money altogether and had to split it up to see who earned how much money.  This program isn't ideal for any more than 3 people and will probably start work on a better version of this at some point in the future that supports more people instead of just 3 pre named people.
